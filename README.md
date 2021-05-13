@@ -1,0 +1,1 @@
+Etch-a-Sketch project using DOM manipulation, CSS, and HTML knowledge.
