@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Etch-a-Sketch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 class="header">Adam's Marvelous Etch-a-Sketch</h1>
+
+
+<div class="grid-generator" >
+    <button id="btn">Generate My Grid!!</button>
+</div>
+
+<div class="grid-center">
+    <div class="grid-container" id="grid-container">   
+    </div>
+</div>
+
+<script>
+
+
+const gridContainer = document.getElementById("grid-container");
+
+
+function createRows(n){
+    for (i=0; i<n; i++) {
+        const row = document.createElement('div');
+        row.className = "grid-row";
+        row.id = "row";
+
+        gridContainer.appendChild(row);
+        
+    } 
+}   
+
+
+const allRows = document.getElementsByClassName("grid-row");
+
+
+function makeBoxes(){
+    for (i=0; i<allRows.length; i++){
+        for (j=0; j<allRows.length; j++){
+            const box = document.createElement('div');
+            box.className = "grid-box";
+            allRows[i].appendChild(box);
+    
+        }
+    }
+}
+
+function wipeGrid(){
+    
+    console.log(allRows.length);
+    console.log(allRows);
+    for (i=0; i<allRows.length; i++){
+        while (allRows[i].firstChild){
+            allRows[2].removeChild(allRows[2].lastChild);
+            
+        }
+
+    }
+}
+
+function createGrid(){
+    
+    const gridSize = prompt("Size ----------- *max of 64*");
+   if (gridSize > 64) return;
+   wipeGrid();
+   createRows(gridSize);
+   makeBoxes();
+    
+
+}
+
+const btn = document.getElementById('btn');
+btn.addEventListener("click", createGrid);
+
+
+
+
+</script>
+
+
+</body>
+</html>

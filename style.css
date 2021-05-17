@@ -1,0 +1,39 @@
+.header {
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+.grid-generator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.grid-center{
+    display: flex;
+    justify-content: center;
+}
+.grid-container{
+    height: 480px;
+    width: 480px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.grid-row{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.grid-box{
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    flex: 1;
+    border-width: thin;
+}
