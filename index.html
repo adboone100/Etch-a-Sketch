@@ -52,29 +52,43 @@ function makeBoxes(){
     }
 }
 
-function wipeGrid(){
-    
-    console.log(allRows.length);
-    console.log(allRows);
-    for (i=0; i<allRows.length; i++){
-        while (allRows[i].firstChild){
-            allRows[2].removeChild(allRows[2].lastChild);
-            
-        }
-
+function clearGrid(){
+    while (gridContainer.firstChild){
+        gridContainer.removeChild(gridContainer.lastChild);
     }
+}
+
+function randomNum(){
+    return Math.floor(Math.random() * 5);
+}
+
+function generateColor(){
+    const colors = ["#00a08f", "#124653", "#fee074", "#ff9469", "#fe8d8f"];
+    let num = randomNum();
+    return colors[num];
+}
+
+function drawLine(){
+    const grids = document.querySelectorAll(".grid-box");
+    grids.forEach(grid => {
+        grid.addEventListener('mouseover', function(){
+            grid.style.backgroundColor = generateColor();
+            //grid.classList.add("grid-box-draw");
+        })
+    })
 }
 
 function createGrid(){
     
     const gridSize = prompt("Size ----------- *max of 64*");
    if (gridSize > 64) return;
-   wipeGrid();
+   clearGrid();
    createRows(gridSize);
    makeBoxes();
-    
-
+   drawLine();
 }
+
+
 
 const btn = document.getElementById('btn');
 btn.addEventListener("click", createGrid);

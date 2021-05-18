@@ -16,8 +16,8 @@
     justify-content: center;
 }
 .grid-container{
-    height: 480px;
-    width: 480px;
+    height: 600px;
+    width: 600px;
     border-style: solid;
     display: flex;
     flex-direction: column;
@@ -36,4 +36,8 @@
     display: flex;
     flex: 1;
     border-width: thin;
+}
+
+.grid-box-draw{
+    background-color: black;
 }
