@@ -1,6 +1,15 @@
+body{
+    background-color:#DCDCDC;
+}
 .header {
     text-align: center;
-    padding-top: 30px;
+    font-size: 50px;
+    font-style: oblique;
+    color: #ea7070;
+    text-shadow: 7px -4px 1px #4dbedf,
+    -7px 4px 1px #f8c77c;
+    
+    
 }
 
 
@@ -9,6 +18,35 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 25px;
+    padding-top: -20px;
+    
+}
+
+#btn{
+    margin-right: 50px;
+    font-style: oblique;
+    background: snow;
+    color: black;
+    height: 30px;
+    border-radius: 10px;
+    font-style: bold;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px lightgray;
+}
+
+#btn2{
+    font-style: oblique;
+    background: snow;
+    color: black;
+    height: 30px;
+    border-radius: 10px;
+    font-style: bold;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px lightgray;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .grid-center{
@@ -16,8 +54,8 @@
     justify-content: center;
 }
 .grid-container{
-    height: 600px;
-    width: 600px;
+    height: 550px;
+    width: 550px;
     border-style: solid;
     display: flex;
     flex-direction: column;

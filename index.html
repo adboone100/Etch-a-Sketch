@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Etch-a-Sketch</title>
+  <title>Adam's Etch-a-Sketch</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body></body>
 
-<h1 class="header">Adam's Marvelous Etch-a-Sketch</h1>
+<h1 class="header">The Etch-a-Sketch</h1>
 
 
 <div class="grid-generator" >
-    <button id="btn">Generate My Grid!!</button>
+    <button id="btn">Create Sketch Board</button>
+    <button id="btn2">Erase</button>
 </div>
 
 <div class="grid-center">
@@ -89,9 +90,18 @@ function createGrid(){
 }
 
 
+function eraseGrid(){
+    const grids = document.querySelectorAll(".grid-box");
+    grids.forEach(grid => grid.style.backgroundColor = "transparent");
+}
 
 const btn = document.getElementById('btn');
 btn.addEventListener("click", createGrid);
+
+const eraseBtn = document.getElementById("btn2");
+eraseBtn.addEventListener("click", eraseGrid);
+
+
 
 
 
