@@ -68,6 +68,10 @@ button:hover {
     flex-direction: row;
 }
 
+.grid-row:hover{
+    cursor: url(brush-icon7.png) 6 20, auto;
+}
+
 .grid-box{
     border-style: solid;
     border-color: black;
